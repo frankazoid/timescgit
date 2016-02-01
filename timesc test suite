@@ -11,7 +11,7 @@
 <tr><td><a href="timesc_login">login</a></td></tr>
 <tr><td><a href="timesc_open_page">open edit profile page</a></td></tr>
 <tr><td><a href="timesc_check_text_fields">check text fields</a></td></tr>
-<tr><td><a href="timesc_unlick_social">unlink social</a></td></tr>
+<tr><td><a href="timesc_unlink_social">unlink social</a></td></tr>
 <tr><td><a href="timesc_check_password">check password</a></td></tr>
 <tr><td><a href="timesc_logout">logout</a></td></tr>
 </tbody></table>
