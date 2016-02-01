@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://time.sc/" />
+<title>check text fields</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">check text fields</td></tr>
+</thead><tbody>
+<!--checking name field-->
+<tr>
+	<td>verifyText</td>
+	<td>css=span.block-field__label</td>
+	<td>exact:Имя*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>name=firstname@placeholder</td>
+	<td>Введите имя</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<!--assuming there should be verification for invalid name-->
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td>1nv@1i$ n@m&amp;</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<!--checking lastname field-->
+<!--assuming it is a bug and surname is mandatory-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/label/span</td>
+	<td>exact:Фамилия*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>name=lastname@placeholder</td>
+	<td>Введите фамилию</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<!--assuming there should be verification for invalid lastname-->
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td>1nv@1i$ 1@$tn@m&amp;</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<!--checking town field-->
+<tr>
+	<td>type</td>
+	<td>name=fakecity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>name=fakecity@placeholder</td>
+	<td>Введите город, где вы живете</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=fakecity</td>
+	<td>El Sargento</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.geo-autocomplete-dropdown__text &gt; strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<!--checking email field-->
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>invalid.email</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>valid@email.com</td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>css=button.btn.btn--primary</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
